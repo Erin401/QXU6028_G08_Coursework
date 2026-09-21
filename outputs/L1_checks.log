@@ -1,0 +1,59 @@
+==========================================================================
+QXU6028 L1  |  group G08  |  forward model + mobility correction
+==========================================================================
+c                 = 0.04292347717797175
+T                 = 300.0 K   (k_B T = 0.025852 eV)
+E_F operating pt  = 0.08479342068805736 eV
+rho               = 256.1152083335392 ohm/sq
+sweep             = 12 rows, 0.03 -> 0.25 eV
+
+[GATE 0] model reproduces the supplied band-edge count
+         max |n_band_model - n_band_data| / n_band_data = 2.967e-12
+         PASS
+
+[GATE 1] handbook verified-ratio table and monotonicity
+                 E_F (eV)   expected   computed      |err|  verdict
+                    0.000       1.00      1.000     0.0000  PASS
+                    0.073       2.00      2.005     0.0049  PASS
+                    0.100       2.60      2.599     0.0012  PASS
+                    0.200       5.10      5.104     0.0044  PASS
+         monotonic 0->0.25 non-decreasing       True         --  PASS
+
+[GATE 2] closed-form Fermi-referenced count vs numerical integral
+         the closed form is exact for an infinite upper limit, so the
+         residual must be pure trapezoid O(h^2) discretisation error.
+         max rel diff on handbook grid (20001 pts) = 1.184e-06   (tol 1e-05)  PASS
+         grid refinement at the operating point:
+           n_points =    2001   rel err = 1.879e-05
+           n_points =   20001   rel err = 1.879e-07
+           n_points =  200001   rel err = 1.879e-09
+         observed convergence order (first decade) = 2.000  (expect 2 for O(h^2))  PASS
+
+[GATE 3] CSV-derived correction factor vs model-derived correction factor
+         max relative difference = 2.967e-12
+         PASS
+
+[WORKING POINT] evaluated at the EXACT E_F from L1_params.json
+         n_band  (datasheet count)  = 7.648284e+11 cm^-2
+         n_Fermi (corrected count)  = 3.389119e+11 cm^-2
+         closed form check          = 3.389119e+11 cm^-2  (rel diff 1.88e-07)
+         correction factor C        = 2.256717
+         mobility (datasheet basis) = 31863.26 cm^2/Vs
+         mobility (corrected)       = 71906.37 cm^2/Vs
+         ratio mu_corr / mu_band    = 2.256717  (= C, as required)
+
+         nearest-CSV-row shortcut: row 3 at E_F = 0.09 eV gives C = 2.3719
+         -> that would misreport C by +5.103 %
+
+[CROSSINGS] correction factor reaches
+         C = 2  at E_F = 0.07276 eV   (2.815 k_B T)
+         C = 4  at E_F = 0.15735 eV   (6.086 k_B T)
+
+[WRITTEN] outputs\results.json
+[WRITTEN] outputs\L1_summary.json
+[WRITTEN] outputs\L1_counts_and_correction.png
+[WRITTEN] outputs\L1_validation.png
+
+==========================================================================
+L1 GATE SUMMARY: ALL CHECKS PASS
+==========================================================================
