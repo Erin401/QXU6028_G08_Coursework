@@ -6,6 +6,26 @@ One-command reproduction:
 python reproduce_L1.py --data data/regular_G08 --out outputs --commit "$(git rev-parse HEAD)"
 ```
 
+## How to reproduce L1 results
+
+Install dependencies:
+
+```bash
+pip install numpy pandas matplotlib
+```
+
+Run the L1 reproduction script from the repository root:
+
+```bash
+python reproduce_L1.py --data data/regular_G08 --out outputs
+```
+
+The script expects the input data folder to contain:
+
+- `L1_data.csv`
+- `L1_params.json`
+- `results_template.json`
+
 ## Outputs
 
 | File | Content |
