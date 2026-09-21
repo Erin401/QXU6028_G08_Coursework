@@ -20,6 +20,6 @@ python reproduce_L1.py --data data/regular_G08 --out outputs --commit "$(git rev
 
 ## Git
 
-- Source commit recorded in this L1 checkpoint: `0b173b8907413c409f8a101dacd62721d02c0278`
+- Source commit recorded in this L1 checkpoint: `306555c4877d872ef6f3f77602233716f9d1a179`
 - The repository includes the L1 source data, analysis code, report text and checkpoint evidence needed to review the result.
 - Cache directories such as `.mplcache` and `__pycache__` are excluded.
