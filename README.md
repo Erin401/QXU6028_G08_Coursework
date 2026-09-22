@@ -25,17 +25,42 @@ data/regular_G08/L1_params.json
 
 The regenerated files are saved in the `outputs` folder.
 
+
 ## 2. How to Reproduce the Four-Curve Results
 
-This supplementary analysis compares the band-edge and Fermi-level carrier-count definitions and their corresponding \(R_H\) and \(R_s\) results.
+Before running the command, check the end of the PowerShell line.
 
-From the repository root, run:
+If it ends with:
 
-```bash
+```text
+QXU6028_G08_L1-main>
+```
+
+run:
+
+```powershell
 python Supplemental_L1_Rh_Rs/G08_final_band_fermi.py --data data/regular_G08 --out Supplemental_L1_Rh_Rs --no-show
 ```
 
-This command directly uses the existing `data/regular_G08/L1_params.json` file, so no duplicate data folder is required.
+If the PowerShell line ends with:
+
+```text
+Supplemental_L1_Rh_Rs>
+```
+
+first return to the main project folder:
+
+```powershell
+cd ..
+```
+
+Then run:
+
+```powershell
+python Supplemental_L1_Rh_Rs/G08_final_band_fermi.py --data data/regular_G08 --out Supplemental_L1_Rh_Rs --no-show
+```
+
+This command uses the existing `data/regular_G08/L1_params.json` file and saves the generated results in `Supplemental_L1_Rh_Rs`.
 
 ## 3. Outputs
 
