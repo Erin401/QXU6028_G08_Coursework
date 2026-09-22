@@ -69,3 +69,15 @@ Snapping to the nearest row of `L1_data.csv` (`E_F = 0.09 eV`) would give `C = 2
 ## 6. Quantified sensor recommendation
 
 At its intended operating point the band-edge model over-reports the G08 carrier density by a factor of **C = 2.26** and, at fixed sheet resistance, under-reports the extracted mobility by the same factor. The corrected carrier density is **3.39×10¹¹ cm⁻²** and the corrected mobility is **7.19×10⁴ cm² V⁻¹ s⁻¹**. Any sensor calibration that converts electrical response into carrier density or mobility should therefore use the Fermi-referenced count; otherwise its extracted transport scale will carry this factor-of-2.26 model error. The present L1 data do not by themselves determine the response of a particular analyte or sensing mechanism.
+
+## 7. Supplemental L1 \(R_H\) and \(R_s\) Analysis
+
+The supplemental analysis extends the L1 carrier-count comparison to both electrons and holes. It evaluates the band-edge counts \(n_{\mathrm{band}}\) and \(p_{\mathrm{band}}\), together with the Fermi-referenced counts \(n_{\mathrm{Fermi}}\) and \(p_{\mathrm{Fermi}}\), over the range \(-0.25 \leq E_F \leq 0.25\ \mathrm{eV}\).
+
+The following equations are used to calculate the Hall coefficient and sheet resistance:
+
+\[
+R_H=\frac{p-n}{e(p+n)^2},
+\qquad
+R_s=\frac{1}{e\mu(p+n)}.
+\]
