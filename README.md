@@ -1,6 +1,6 @@
 # QXU6028 Group G08 - L1 Deliverable
 
-This repository contains the source data, analysis scripts, numerical results, validation figures, and supplementary carrier-count comparison for the QXU6028 Group G08 L1 task.
+The original repository was created for the L1 submission, so the L1 files remain in the repository root. These include data, outputs, Supplemental_L1_Rh_Rs, l1_model.py, reproduce_L1.py, L1_briefnote.md, and the L1 checkpoint archive. Their locations have been kept unchanged to preserve the existing L1 data paths and reproduction commands documented in this README. The later L2 and L3 work has been added separately under GNN_L2_Submission and GNN_L3_Submission. 
 
 ## 1. How to Reproduce the L1 Results
 
