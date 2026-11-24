@@ -1,0 +1,62 @@
+{
+  "group": "G08",
+  "temperature_K": 300.0,
+  "kBT_eV": 0.025851999,
+  "measurement_count": 52,
+  "repeats_per_measurement": 3,
+  "hall_sign_change_bracket": [
+    16,
+    17
+  ],
+  "normalisation": {
+    "R_H_max_abs": 2.1866951164899998e-12,
+    "R_xx_max": 5.750021498970001e-12
+  },
+  "grids": {
+    "energy_points": 4000,
+    "energy_range_eV": [
+      -2.5,
+      2.5
+    ],
+    "EF_points": 400,
+    "EF_range_kT": [
+      -8.0,
+      9.0
+    ],
+    "EF_step_eV": 0.0011014636165413427,
+    "gap_range_kT": [
+      0.5,
+      8.0
+    ],
+    "gap_step_kT": 0.25
+  },
+  "central_fit": {
+    "selected_model": "cone",
+    "selected_Eg_kT": 0.0,
+    "selected_Eg_eV": 0.0,
+    "selected_residual": 0.011206859541182439,
+    "cone_residual": 0.011206859541182439,
+    "best_gap_residual": 0.015950347385603407,
+    "best_gap_kT": 0.5,
+    "best_gap_improvement_fraction": -0.42326646702314985,
+    "selection_threshold_fraction": 0.15
+  },
+  "signed_gap_exploratory": {
+    "best_signed_gap_kT": -0.066,
+    "best_signed_gap_sse": 0.006314765363076744,
+    "cone_sse": 0.006530872440341176,
+    "best_formal_positive_gap_kT": 0.5,
+    "best_formal_positive_gap_sse": 0.013229506249514121,
+    "signed_scan_improvement_fraction": 0.03309007781709827,
+    "signed_gap_grid_count": 57
+  },
+  "bootstrap": {
+    "seed": 6028,
+    "replicates": 200,
+    "hard_gap_selection_fraction": 0.0,
+    "Eg_kT_median": 0.0,
+    "Eg_kT_p16": 0.0,
+    "Eg_kT_p84": 0.0,
+    "Eg_uncertainty_half_width_kT": 0.0
+  }
+}
